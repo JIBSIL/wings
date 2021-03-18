@@ -155,7 +155,7 @@ type SystemConfiguration struct {
 	// Set to 0 to disable disk checking entirely. This will always return 0 for the disk space used
 	// by a server and should only be set in extreme scenarios where performance is critical and
 	// disk usage is not a concern.
-	DiskCheckInterval int64 `default:"150" yaml:"disk_check_interval"`
+	DiskCheckInterval int64 `default:"15" yaml:"disk_check_interval"`
 
 	// If set to true, file permissions for a server will be checked when the process is
 	// booted. This can cause boot delays if the server has a large amount of files. In most
@@ -210,7 +210,7 @@ type Transfers struct {
 	// if the value is greater than 0, the write speed is the value in MiB/s.
 	//
 	// Defaults to 0 (unlimited)
-	DownloadLimit int `default:"0" yaml:"download_limit"`
+	DownloadLimit int `default:"1" yaml:"download_limit"`
 }
 
 type ConsoleThrottles struct {
